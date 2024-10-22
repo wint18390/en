@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"> 
+  <script src="https://wint18390.github.io/sets/js.js"></script>
+
+</head>
+<body>
+
+<style>body{
+       margin:0px;
+       background: #F2F2F2 ;
+       font-family: Tahoma, Verdana, sans-serif;
+
+    }
+    .navbar{
+      background: #F2F2F2 ;
+      padding:20px;
+        color:white;
+        position: fixed;
+        width: 100%;
+    }
+    .navbar .container-fluid{
+        display: flex;
+        justify-content:space-around;
+        
+    }
+    .navbar .navbar-brand{
+        color:white;
+    }
+    .material-symbols-outlined{
+        font-size:13px;
+    }
+
+    .row .maincontent .text-content{
+          margin:auto;
+          justify-content:center;
+          width: 40%;
+          padding-top:20px;
+    }
+
+    .row .maincontent .text-xasd{
+        font-size:20px;
+    }
+    .content{
+        padding:20px;
+    }
+    .content .moreform {
+        margin:auto;
+        justify-content:center;
+        float:right;
+        text-align:center;
+        margin:auto;
+        display: inline-block;
+        position: fixed;
+        top:100px;
+    }
+    .content .moreform h1{
+        font-size:20px;
+        padding-right:96px;
+        padding-bottom:20px;
+        color:#f47938;
+    }
+    .thumbnail .content-side .wp-block-image  img{
+         width: 120px;
+         height:100px;
+         border-radius:10px;
+         
+    }
+    .content .thumbnail{
+        display:flex;
+        width: 70%;
+        margin-left:100px;
+    }
+    .side-content{
+        float:right;
+        width: 1020px;
+    }
+    .container .side-content{
+        margin:auto;
+        width: 300px;
+        text-align:center;
+        margin-right:100px;
+        margin-top:-800px;
+        height:400px;
+        color:black;
+    }
+    .content-side{
+        display:flex;
+        width: 100%;
+    }
+    .content-side h1{
+        padding-top:20px;
+        width: 160px;
+    }
+    
+    .container .row-adkgs{
+        position:fixed;
+        margin-top:-809px;
+        border:1px solid black;
+        width: 300px;
+        height:400px;
+     }
+     .content-conts{
+        color:black;
+     }
+     .footer{
+        background:#292525;
+        height:30px;
+     }
+     .texts{
+       border-right: 1px solid #f47938;
+       height:90px;
+       border-radius:10px;
+      
+     }
+
+
+     /*slide*/
+    
+      .row  .text-content .gallery {
+            background: #EEE;
+            height:300px;
+            display: flex;
+        }
+       
+       .gallery-cell {
+         width: 30%;
+         height: 200px;
+         margin-right: 10px;
+
+       }
+       
+       /* cell number */
+       .gallery-cell:before {
+         display: block;
+         text-align: center;
+         line-height: 200px;
+         font-size: 80px;
+         color: white;
+       }
+       .gallery-cell img{
+         padding:2px;
+         width: 100%;
+         height:70%;
+       }
+       .gallery-cell p{
+          color:black;
+          height:50%;
+       }
+       .flickity-page-dots{
+         display:none;
+       }
+     /*slide*/
+
+
+     
+  .flickity-enabled {
+    position: relative;
+  }
+  
+  .flickity-enabled:focus { outline: none; }
+  
+  .flickity-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+  
+  .flickity-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* draggable */
+  
+  .flickity-enabled.is-draggable {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  
+  .flickity-enabled.is-draggable .flickity-viewport {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  
+  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  
+  /* ---- previous/next buttons ---- */
+  
+  .flickity-prev-next-button {
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    background: hsla(0, 0%, 100%, 0.75);
+    cursor: pointer;
+    /* vertically center */
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
+  .flickity-prev-next-button:hover { background: white; }
+  
+  .flickity-prev-next-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px #09F;
+  }
+  
+  .flickity-prev-next-button:active {
+    filter: alpha(opacity=60); /* IE8 */
+    opacity: 0.6;
+  }
+  
+  .flickity-prev-next-button.previous { left: 10px; }
+  .flickity-prev-next-button.next { right: 10px; }
+  /* right to left */
+  .flickity-rtl .flickity-prev-next-button.previous {
+    left: auto;
+    right: 10px;
+  }
+  .flickity-rtl .flickity-prev-next-button.next {
+    right: auto;
+    left: 10px;
+  }
+  
+  .flickity-prev-next-button:disabled {
+    filter: alpha(opacity=30); /* IE8 */
+    opacity: 0.3;
+    cursor: auto;
+  }
+  
+  .flickity-prev-next-button svg {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+  }
+  
+  .flickity-prev-next-button .arrow {
+    fill: #333;
+  }
+  
+  /* color & size if no SVG - IE8 and Android 2.3 */
+  .flickity-prev-next-button.no-svg {
+    color: #333;
+    font-size: 26px;
+  }
+  
+  /* ---- page dots ---- */
+  
+  .flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .flickity-rtl .flickity-page-dots { direction: rtl; }
+  
+  .flickity-page-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    background: #333;
+    border-radius: 50%;
+    filter: alpha(opacity=25); /* IE8 */
+    opacity: 0.25;
+    cursor: pointer;
+  }
+  
+  .flickity-page-dots .dot.is-selected {
+    filter: alpha(opacity=100); /* IE8 */
+    opacity: 1;
+  }
+
+
+    @media only screen and (max-width: 1610px) {
+       .content .moreform{
+          overflow-x:scroll;
+          padding:30px;
+
+       }
+       .moreform .thumbnail{
+           margin-left:50px;
+           width: 300px;
+
+       }
+      .container .row-adkgs{
+        margin-top:-809px;
+        border:1px solid black;
+        width: 250px;
+        height:400px;
+     }
+    }
+    @media only screen and (max-width: 600px) {
+
+        .content .moreform{
+            overflow-x:scroll;
+            padding:30px;
+            width: 85%;
+            margin:auto;
+            margin-bottom:60px;
+
+        }
+        .moreform .thumbnail .texts{
+            width: 250px;
+            padding:5px;
+        }
+        .moreform{
+           margin-bottom:60px;
+        }
+        .container .row-adkgs{
+              border:1px solid black;
+              width: 300px;
+              height:400px;
+              position: static;
+              display:none;
+
+        }      
+        
+         .content .moreform {
+               margin:auto;
+               justify-content:center;
+               float:right;
+               text-align:center;
+               margin:auto;
+               display: inline-block;
+               top:100px;
+               position: static;
+     
+         }
+    }
+    @media only screen and (max-width: 600px) {
+        .container .row-adkgs{
+              border:1px solid black;
+              width: 300px;
+              height:400px;
+              position: static;
+              display:none;
+
+        }      
+         .content{
+
+
+        }
+         .content .moreform {
+               margin:auto;
+               justify-content:center;
+               float:right;
+               text-align:center;
+               margin:auto;
+               display: inline-block;
+               top:100px;
+               position: static;
+             
+         }
+         .moreform .thumbnail {
+              margin-left:5px;
+              width: 300px;
+         }
+         .row .maincontent .text-content{
+                width: 80%;
+                margin:auto;
+
+         }
+   
+    }
+    @media only screen and (max-width: 1500px) {
+        .container .row-adkgs{
+              border:1px solid black;
+              width: 300px;
+              height:400px;
+              position: static;
+              display:none;
+
+        }      
+        
+         .content .moreform {
+               margin:auto;
+               justify-content:center;
+               float:right;
+               text-align:center;
+               margin:auto;
+               display: inline-block;
+               top:100px;
+     
+         }
+         .row .maincontent .text-content{
+            width: 50%;
+            margin-right:102px;
+
+         }
+   
+    }
+    @media only screen and (max-width: 1100px) {
+        .container .row-adkgs{
+              border:1px solid black;
+              width: 300px;
+              height:400px;
+              position: static;
+              display:none;
+        }      
+         .row .content .moreform {
+               margin:auto;
+               justify-content:center;
+               float:right;
+               text-align:center;
+               margin:auto;
+               position: static;
+               display:flex;
+               margin-top:100px;
+         }
+         .row .maincontent .text-content{
+                width: 80%;
+                margin:auto;
+
+
+         }
+   
+    }
+    @media only screen and (max-width: 1200px) {
+        .container .row-adkgs{
+              border:1px solid black;
+              width: 300px;
+              height:400px;
+              position: static;
+              display:none;
+        }      
+         .row .content .moreform {
+               margin:auto;
+               justify-content:center;
+               float:right;
+               text-align:center;
+               margin:auto;
+               position: static;
+               display:flex;
+               margin-top:100px;
+
+         }
+         .row .maincontent .text-content{
+                width: 60%;
+                margin:auto;
+
+
+         }
+   
+    }
+    @media only screen and (max-width: 500px) {
+        .container .row-adkgs{
+              border:1px solid black;
+              width: 300px;
+              height:400px;
+              position: static;
+              display:none;
+
+        }      
+        
+         .content .moreform {
+               margin:auto;
+               justify-content:center;
+               float:right;
+               text-align:center;
+               margin:auto;
+               display: inline-block;
+               top:100px;
+               position: static;
+         }
+         .row .maincontent .text-content{
+                width: 80%;
+                margin:auto;
+
+
+         }
+         .text-content .wp-block-image img{
+              width: 100%;
+              height: 100%;
+    }
+   
+    }
+
+    .content-side img{
+        width:100px;
+        height:100px;
+        padding:5px;
+
+    }
+
+    .text-content img{
+        width: 100%;
+        height:100%;
+        text-align:center;
+        margin:auto;
+        padding:10px;
+    }
+
+    .navbar{
+        background:#f5f5f5;
+        padding:20px;
+        color:white;
+        position: fixed;
+        width: 100%;
+        margin-top:0px;
+        border-bottom:1px solid grey;
+        color: #f47938;
+    }
+
+    .collapse{
+      border:1px solid #f47938;
+      padding:10px;
+      border-radius:101px;
+    }
+    .collapse .btn{
+      border:transparent;
+      font-size:15px;
+      color:#f47938;
+    }
+    .collapse .span{
+      color:#f5f5f5;
+
+    }
+    .collapse .form-control{
+      border:1px solid transparent;
+      background:#f5f5f5;
+    }
+    .content  .moreform h1{
+        font-size:18px;
+    }
+    .according{
+    margin:auto;
+    border:1px solid black;
+    height:100px;
+    justify-content:center;
+    width: 40%;
+    margin-top:50px;
+    
+  } 
+  .searchs{
+     border:1px solid transparent;
+     background: #F2F2F2 ;
+  }
+  .row  .center-content{
+     margin:auto;
+  }
+  .side-content  .row-adkgs{
+      float:right;
+      margin-right:200px;
+      margin-top:-110%;
+      height:300px;
+      width: 20%;
+      border:1px solid black;
+  }
+  .side-content  img{
+      height:200%;
+      width: 100%;
+      border:1px solid black;
+  }
+  .footer .content-footer{
+      margin:auto;
+      text-align:center;
+      color:white;
+      padding-top:20px;
+      color:white;
+  }
+  .footer .content-footer a{
+      color:white;
+  }
+  .footer .content-footer .cont {
+       padding-bottom:20px;
+  }
+
+    @media screen and (max-width: 900px) {
+      .row .maincontent .text-content {
+              width: 370px;
+              margin: auto;
+       }
+      .container{
+           padding:20px;
+      }
+      .side-content  .row-adkgs{
+            display:none;
+            float:right;
+            margin-right:200px;
+            margin-top:-110%;
+            height:300px;
+            width: 20%;
+            border:1px solid black;
+        }
+        .content .moreform{
+          width: 200px;
+        }
+        .container .moreform{
+           margin:auto;
+           overflow-x:scroll;
+           width: 100%;
+        }
+        .content .thumbnail .texts{
+             width: 400px;
+         }
+        .content{
+            margin:auto;
+            overflow-y:scroll;
+        }
+        .content .moreform h1{
+              display:none;
+              margin-left:500px;
+        } 
+        .container .moreform .fsti-line{
+            margin-left:200px;
+        }
+        .row .maincontent .text-content {
+              width: 400px;
+              margin: auto;
+        }
+    }
+    @media screen and (max-width: 500px) {
+       .maincontent .text-content{
+           width: 100%;
+       }
+      .side-content  .row-adkgs{
+            display:none;
+            float:right;
+            margin-right:200px;
+            margin-top:-110%;
+            height:300px;
+            width: 20%;
+            border:1px solid black;
+        }
+        .container .moreform{
+           margin:auto;
+           overflow-x:scroll;
+           width: 100%;
+        }
+     
+        .content{
+            margin:auto;
+            overflow-y:scroll;
+        }
+        .content .moreform h1{
+              display:block;
+        } 
+        .container .moreform .fsti-line{
+            margin-left:550px;
+        }
+    }
+    @media screen and (max-width: 1505px) {
+      
+      .side-content  .row-adkgs{
+            display:none;
+            float:right;
+            margin-right:200px;
+            margin-top:-110%;
+            height:300px;
+            width: 20%;
+            border:1px solid black;
+        }
+        .container .moreform{
+           margin:auto;
+           overflow-x:scroll;
+           width: 100%;
+        }
+        .content{
+            margin:auto;
+            overflow-y:scroll;
+        }
+        .content .moreform h1{
+              display:none;
+              margin-left:500px;
+        } 
+      }
+      @media screen and (max-width: 601px) {
+        .row .maincontent .text-content {
+              width: 370px;
+              margin: auto;
+        }
+        .container .according{
+              width: 370px;
+              margin: auto;
+        }
+        .side-content  .row-adkgs{
+              display:none;
+              float:right;
+              margin-right:200px;
+              margin-top:-110%;
+              height:300px;
+              width: 20%;
+              border:1px solid black;
+        }
+         
+      }
+      @media screen and (max-width: 390px) {
+        .row .maincontent .text-content {
+              width: 300px;
+              margin: auto;
+        }
+        .container .according{
+          width: 300px;
+          margin: auto;
+        }
+        .side-content  .row-adkgs{
+              display:none;
+              float:right;
+              margin-right:200px;
+              margin-top:-110%;
+              height:300px;
+              width: 20%;
+              border:1px solid black;
+        }
+         
+      }</style>
+      
+<nav class="navbar navbar-inverse">
+      
+          <div class="container-fluid">
+
+         <div class="navbar-header">
+            <a class="navbar-brand" style="color: #f47938; font-size:30px; text-decoration:none;" href="https://wint18390.github.io/sets/">Gsense</a>
+         </div>
+
+         <div class="collapse navbar-collapse" id="myNavbar">
+           <form class="navbar-form navbar-right" role="search" menthod="POST" action="http://site-senses/en/">
+             <div class="form-group input-group">
+               <input type="text" class="searchs" value="" name="s" id="s" placeholder="Search...">
+               <span class="input-group-btn">
+                  <button class="btn" type="submit">
+                      <span class="material-symbols-outlined">
+                           search
+                      </span>
+                  </button>
+               </span>        
+             </div>
+           </form>
+         </div>
+
+    </div>
+
+</nav>
+  
+<div class="container">    
+
+  <div class="row">
+
+      <div class="content">
+                  
+                  <div class="moreform">
+     
+                           <h1 class="TRENDING"> MORE FROM  TRENDING</h1>   
+     
+                         <div class="thumbnail fsti-line">
+                                <div>
+                                  <a class="content-side">
+                                     <img src="https://wint18390.github.io/sets/wp-content/uploads/2024/10/e1a3df30ff7cca08151638cec6b1a216.jpg" alt="Paris">
+                                  </a>
+                                </div>
+                                <div class="texts">
+                                  <a class="content-conts">
+                                     <p>Upcoming Events:
+                                      Fri. 27 November 2015</p>
+                                   </a>
+                                </div>
+                         </div>                    
+                         
+                         
+                         <div class="thumbnail">
+                              <div>
+                                  <a class="content-side">
+                                    <img src="https://wint18390.github.io/sets/wp-content/uploads/2024/10/6876993a25a8fc274cc09aee12171034-1.jpg" alt="Paris">
+                                  </a>
+                              </div>
+                              <div class="texts">
+                                 <a class="content-conts">
+                                     <p>Upcoming Events:
+                                     Fri. 27 November 2015</p>
+                                 </a>
+                              </div>
+                         </div>  
+
+                         <div class="thumbnail">
+                              <div>
+                                  <a class="content-side">
+                                    <img src="https://wint18390.github.io/sets/wp-content/uploads/2024/10/Escaping_criticism-by_pere_borrel_del_caso-1.png" alt="Paris">
+                                  </a>
+                              </div>
+                              <div class="texts">
+                                 <a class="content-conts">
+                                     <p>Upcoming Events:
+                                     Fri. 27 November 2015</p>
+                                 </a>
+                              </div>
+                         </div>  
+                         
+                   </div>
+ 
+                         
+    </div>
+      <div class="maincontent">
+
+          <div class="according">
+                 <img src="https://wint18390.github.io/sets/wp-content/themes/stillalive/img/" alt="">
+          </div>
+       
+          
+            <div class="text-content">
+
+                <p class="blog-date">Friday, October 18th, 2024</p> 
+
+                    <a href="https://wint18390.github.io/sets/privacy/"> <h1>Privacy Policy</h1></a>
+                        
+<p>Who we are</p>
+
+
+
+<p>Suggested text: Our website address is: http://site-senses/en.</p>
+
+
+
+<p>What Data We Collect</p>
+
+
+
+<p>General Data: The use of our services will automatically create information that will be collected. For example, when you use our Services, your geographic location, how you use the Services, information about the type of device you use, your Open Device Identification Number, date/time stamps for your visit, your unique device identifier, your browser type, operating system, Internet Protocol (IP) address, and domain name are all collected. This information is generally used to help us deliver the most relevant information to you and administer and improve the Site.</p>
+
+
+
+<p>Log Files: As is true of most websites, we gather certain information automatically and store it in log files. This information includes IP addresses, browser type, Internet service provider (ISP), referring/exit pages, operating system, date/time stamp, and clickstream data. We use this information to maintain and improve the performance of the Services.</p>
+
+
+
+<p>Analytics: We use analytics services (including, but not limited to, Google Analytics) to help analyze how users use the Site. Analytics services use Cookies to collect information such as how often users visit the Site and we use the information to improve our Site and Services. The analytics services’ ability to use and share information collected by them is restricted by their terms of use and privacy policy, which you should refer to for more information about how these entities use this information.</p>
+
+
+
+<p>Location Information: If you have enabled location services on your mobile device, we may collect your location information to improve the Services we offer. If you do not want this information collected, you can disable location services on your device.</p>
+
+
+
+<p>Cookies: “Cookies” are small pieces of information (text files) that a website sends to your computer’s hard drive while you are viewing the website. These text files can be used by websites to make the users experience more efficient. The law states that we can store these cookies on your device if they are strictly necessary for the operation of this site. For all other types of cookies we need your permission. To that end, this site uses different types of cookies. Some cookies are placed by third party services that appear on our pages. We and some third parties may use both session Cookies (which expire once you close your web browser) and persistent Cookies (which stay on your computer until you delete them) to provide you with a more personal and interactive experience on our Services and to market the Services or other products. Marketing cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers. This tracking is done on an anonymous basis and, while not an exhaustive list, some of the companies we work with are Google, AppNexus, Criteo, Rubicon, Pubmatic and DistrictM. To learn more about this practice, including the Self Regulatory Principles for Online Advertising, to which we adhere, you can visit www.aboutads.info/choices, optout.networkadvertising.org and www.youronlinechoices.com</p>
+
+
+
+<p>Use of Your Personal information</p>
+
+
+
+<p>In general, personal information you submit to us is used either to respond to requests that you make, aid us in serving you better, or market our Services. We use your personal information in the following ways:</p>
+
+
+
+<p>Operate, maintain, and improve our site(s), products, and services;</p>
+
+
+
+<p>Respond to comments and questions and provide customer service;</p>
+
+
+
+<p>Link or combine user information with other personal information we get from third parties, to help understand your needs and provide you with better service;</p>
+
+
+
+<p>Develop, improve, and deliver marketing and advertising for the Services;</p>
+
+
+
+<p>Provide and deliver products and services you request;</p>
+
+
+
+<p>Identify you as a user in our system;</p>
+
+
+
+<p>We may store and process your personal information on servers located in both the United States and Europe. We may also create anonymous data records from your personal information by completely excluding information (such as your name) that makes the data personally identifiable to you. We use this anonymous data to analyze request and usage patterns so that we may enhance the content of our Services and improve Site functionality. We reserve the right to use anonymous data for any purpose and disclose anonymous data to third parties at our sole discretion.</p>
+
+
+
+<p>We may receive testimonials and comments from users who have had positive experiences with our Services. We may publish such content. When we publish this content, we may identify our users by their first and last name. We obtain the user’s consent prior to posting this information along with the testimonial.</p>
+
+
+
+<p>Disclosure of Your Personal information</p>
+
+
+
+<p>We disclose your personal information as described below and as described elsewhere in this Privacy Policy.</p>
+
+
+
+<p>Third Parties Designated by You: When you use the Services, the personal information you provide will be shared with the third parties that you authorize to receive such information.</p>
+
+
+
+<p>Third Party Service Providers: We may share your personal information with third party service providers to: provide you with the Services that we offer you through our Services; conduct quality assurance testing; to provide technical support; market the Services; and/or to provide other services to us.</p>
+
+
+
+<p>Information We Share: We may disclose aggregated information about our users and information that does not identify any individual without restriction. In addition, we may disclose personal information that we collect or you provide:</p>
+
+
+
+<p>To fulfill the purpose for which you provide it, for any other purpose disclosed by us when you provide the information, or with your consent;</p>
+
+
+
+<p>To third parties designated by you;</p>
+
+
+
+<p>With our subsidiaries and affiliates;</p>
+
+
+
+<p>To third parties to process payments made through the Services;</p>
+
+
+
+<p>With contractors, service providers and other third parties we use to support our business;</p>
+
+
+
+<p>To a buyer or other successor in the event of a merger, divestiture, restructuring, reorganization, dissolution or other sale or transfer of some or all of our assets, whether as a going concern or as part of bankruptcy, liquidation or similar proceeding, in which personal information held by us about users is among the assets transferred; and</p>
+
+
+
+<p>Other Disclosures: Regardless of any choices you make regarding your Personal information (as described below), lipsum.com may disclose Personal information if it believes in good faith that such disclosure is necessary: (i) in connection with any legal investigation; (ii) to comply with relevant laws or to respond to subpoenas or warrants served on our company; (iii) to protect or defend the rights or property of lipsum.com or users of the Services; and/or (iv) to investigate or assist in preventing any violation or potential violation of the law, this Privacy Policy, or our Terms of Use.</p>
+
+
+
+<p>Third Party Websites</p>
+
+
+
+<p>Our Site may contain links to third party websites. When you click on a link to any other website or location, you will leave our Site or Services and go to another site, and another entity may collect personal information or anonymous data from you. We have no control over, do not review, and are not responsible for, these outside websites or their content. Please be aware that the terms of this Privacy Policy do not apply to these outside websites or content, or to any collection of your personal information after you click on links to such outside websites. We encourage you to read the privacy policies of every website you visit. The links to third party websites or locations are for your convenience and do not signify our endorsement of such third parties or their products, content or websites.</p>
+
+
+
+<p>Your Choices Regarding Information</p>
+
+
+
+<p>Choices: We offer you choices regarding the collection, use, and sharing of your personal information. We may periodically send you emails that directly promote the use of our Services. When you receive promotional communications from us, you may indicate a preference to stop receiving further communications from us and you will have the opportunity to “opt-out” by following the unsubscribe instructions provided in the email you receive or by contacting us directly. Despite your indicated email preferences, we may send you service related communications, including notices of any updates to our Terms of Use or Privacy Policy.</p>
+
+
+
+<p>Cookies: If you decide at any time that you no longer wish to accept cookies from our Services for any of the purposes described above, then you can instruct your browser, by changing its settings, to stop accepting cookies or to prompt you before accepting a cookie from the websites you visit. Consult your browser’s technical information. If you do not accept cookies, however, you may not be able to use all portions of the Services or all functionality of the Services. If you have any questions about how to disable or modify cookies, please contact us at help@lipsum.com</p>
+
+
+
+<p>Young People</p>
+
+
+
+<p>Our Services are not directed to children under the age of 13. If a child under 13 submits personal information to us and we learn that this is the case, we will take steps to remove the personal information from our databases. If you believe that we might have any personal information from a child under 13, please contact us at help@lipsum.com</p>
+
+
+
+<p>Your Rights</p>
+
+
+
+<p>As a user of our site you have the following rights, any of which you may exercise by contacting us at help@lipsum.com</p>
+
+
+
+<p>The right to ask what personal data that we hold about you at any time. Extra requests (particularly repetitive) for data may result in a fee being charged to the user.</p>
+
+
+
+<p>The right to ask us to update and correct any out-of-date or incorrect personal data that we hold about you free of charge.</p>
+
+
+
+<p>As set out above, the right to opt out of any marketing communications that we may send you.</p>
+
+
+
+<p>Further information regarding your rights can be found under: https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/</p>
+
+                           </div>
+                              <div class="thumd-under">
+                              </div>
+                           </div>
+          
+                                     <div class="according">
+                         <img src="https://wint18390.github.io/sets/wp-content/themes/stillalive/img/" alt="">
+                                  s
+                    </div>
+
+            </div>
+           
+      </div>
+       
+      <div class="side-content"> 
+            <aside class="row-adkgs">
+                <img src="https://wint18390.github.io/sets/wp-content/themes/stillalive/img/Screenshot 2024-10-19 000916.png" alt="">
+            </aside>
+      </div>
+
+  
+
+
+
+
+<footer class="footer" style="margin-top:20px; height:100px;">
+
+    <div class="content-footer"> 
+
+       <div class="cont">
+            <a href="https://wint18390.github.io/sets/privacy/"> Terms of Service | Privacy Policy</a>
+       </div>
+
+       <div>
+           <a><img style="width:30px;" src="https://wint18390.github.io/sets/wp-content/themes/stillalive/img/youtube.png" alt=""></a>
+       </div>
+     
+    </div>
+   
+</footer>
+
+
+</body>
+</html>

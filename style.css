@@ -936,6 +936,11 @@ body{
               width: 20%;
               border:1px solid black;
         }
+
+         .material-symbols-outlined {
+          font-size: 13px;
+          margin-left: 49px;
+      }
          
       }
 
